@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220316 14:32:03.183" rpa="false" schemaversion="2">
+<suite id="s1" name="MySql Tests" source="C:\Users\carlos.picon\Development\robot-scripts\explore-libraries\Tests\MySql_Tests.robot">
+<test id="s1-t1" name="Insert a Record">
+<kw name="aConnect" library="MySql" type="SETUP">
+<kw name="Connect To Database Using Custom Params">
+<arg>pymysql</arg>
+<arg>database='rftutorial', user='rftutoril', password='Demoscript1!', host='mysql1100.shared-servers.com', port=1091</arg>
+<msg timestamp="20220316 14:32:03.256" level="FAIL">No keyword with name 'Connect To Database Using Custom Params' found.</msg>
+<status status="FAIL" starttime="20220316 14:32:03.256" endtime="20220316 14:32:03.256"/>
+</kw>
+<status status="FAIL" starttime="20220316 14:32:03.255" endtime="20220316 14:32:03.257"/>
+</kw>
+<kw name="Disconnect" library="MySql" type="TEARDOWN">
+<kw name="Disconnect from Database">
+<msg timestamp="20220316 14:32:03.260" level="FAIL">No keyword with name 'Disconnect from Database' found.</msg>
+<status status="FAIL" starttime="20220316 14:32:03.260" endtime="20220316 14:32:03.260"/>
+</kw>
+<status status="FAIL" starttime="20220316 14:32:03.258" endtime="20220316 14:32:03.260">No keyword with name 'Disconnect from Database' found.</status>
+</kw>
+<tag>MySqlDB</tag>
+<status status="FAIL" starttime="20220316 14:32:03.254" endtime="20220316 14:32:03.261">Setup failed:
+No keyword with name 'Connect To Database Using Custom Params' found.
+
+Also teardown failed:
+No keyword with name 'Disconnect from Database' found.</status>
+</test>
+<test id="s1-t2" name="Verify Insert Contains Correct Input Data">
+<kw name="aConnect" library="MySql" type="SETUP">
+<kw name="Connect To Database Using Custom Params">
+<arg>pymysql</arg>
+<arg>database='rftutorial', user='rftutoril', password='Demoscript1!', host='mysql1100.shared-servers.com', port=1091</arg>
+<msg timestamp="20220316 14:32:03.265" level="FAIL">No keyword with name 'Connect To Database Using Custom Params' found.</msg>
+<status status="FAIL" starttime="20220316 14:32:03.265" endtime="20220316 14:32:03.265"/>
+</kw>
+<status status="FAIL" starttime="20220316 14:32:03.263" endtime="20220316 14:32:03.266"/>
+</kw>
+<kw name="Disconnect" library="MySql" type="TEARDOWN">
+<kw name="Disconnect from Database">
+<msg timestamp="20220316 14:32:03.269" level="FAIL">No keyword with name 'Disconnect from Database' found.</msg>
+<status status="FAIL" starttime="20220316 14:32:03.268" endtime="20220316 14:32:03.269"/>
+</kw>
+<status status="FAIL" starttime="20220316 14:32:03.266" endtime="20220316 14:32:03.269">No keyword with name 'Disconnect from Database' found.</status>
+</kw>
+<tag>MySqlDB</tag>
+<status status="FAIL" starttime="20220316 14:32:03.263" endtime="20220316 14:32:03.270">Setup failed:
+No keyword with name 'Connect To Database Using Custom Params' found.
+
+Also teardown failed:
+No keyword with name 'Disconnect from Database' found.</status>
+</test>
+<test id="s1-t3" name="Log All Rows">
+<kw name="aConnect" library="MySql" type="SETUP">
+<kw name="Connect To Database Using Custom Params">
+<arg>pymysql</arg>
+<arg>database='rftutorial', user='rftutoril', password='Demoscript1!', host='mysql1100.shared-servers.com', port=1091</arg>
+<msg timestamp="20220316 14:32:03.273" level="FAIL">No keyword with name 'Connect To Database Using Custom Params' found.</msg>
+<status status="FAIL" starttime="20220316 14:32:03.273" endtime="20220316 14:32:03.273"/>
+</kw>
+<status status="FAIL" starttime="20220316 14:32:03.272" endtime="20220316 14:32:03.273"/>
+</kw>
+<kw name="Disconnect" library="MySql" type="TEARDOWN">
+<kw name="Disconnect from Database">
+<msg timestamp="20220316 14:32:03.275" level="FAIL">No keyword with name 'Disconnect from Database' found.</msg>
+<status status="FAIL" starttime="20220316 14:32:03.275" endtime="20220316 14:32:03.275"/>
+</kw>
+<status status="FAIL" starttime="20220316 14:32:03.274" endtime="20220316 14:32:03.275">No keyword with name 'Disconnect from Database' found.</status>
+</kw>
+<tag>MySqlDB</tag>
+<status status="FAIL" starttime="20220316 14:32:03.271" endtime="20220316 14:32:03.276">Setup failed:
+No keyword with name 'Connect To Database Using Custom Params' found.
+
+Also teardown failed:
+No keyword with name 'Disconnect from Database' found.</status>
+</test>
+<doc>These are some MySql Database tests</doc>
+<status status="FAIL" starttime="20220316 14:32:03.186" endtime="20220316 14:32:03.278"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="3" skip="0">MySqlDB</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="MySql Tests">MySql Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220316 14:32:03.211" level="ERROR">Error in file 'C:\Users\carlos.picon\Development\robot-scripts\explore-libraries\Resources\DB\MySql.robot' on line 2: Importing library 'DatabaseLibrary' failed: ModuleNotFoundError: No module named 'DatabaseLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\carlos.picon\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\carlos.picon\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\carlos.picon\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\carlos.picon\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\carlos.picon\AppData\Local\Programs\Python\Python310
+  C:\Users\carlos.picon\AppData\Local\Programs\Python\Python310\lib\site-packages</msg>
+</errors>
+</robot>

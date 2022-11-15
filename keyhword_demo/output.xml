@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220311 16:18:02.327" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo Amazon" source="C:\Users\carlos.picon\Development\robot-scripts\keyhword_demo\demo_amazon.robot">
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.amazon.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220311 16:18:02.490" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com'.</msg>
+<status status="PASS" starttime="20220311 16:18:02.490" endtime="20220311 16:18:05.131"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>amazon.com</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220311 16:18:05.133" endtime="20220311 16:18:05.157"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>rug santorini</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220311 16:18:05.158" level="INFO">Typing text 'rug santorini' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20220311 16:18:05.158" endtime="20220311 16:18:05.283"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="nav-search-submit-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220311 16:18:05.284" level="INFO">Clicking button '//*[@id="nav-search-submit-button"]'.</msg>
+<status status="PASS" starttime="20220311 16:18:05.284" endtime="20220311 16:18:06.978"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>results for "rug santorini"</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220311 16:18:06.978" endtime="20220311 16:18:07.002"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[2]/div/div/div/div/div/div/div[2]/div[1]/h2/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220311 16:18:07.003" level="INFO">Clicking link '//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[2]/div/div/div/div/div/div/div[2]/div[1]/h2/a'.</msg>
+<status status="PASS" starttime="20220311 16:18:07.003" endtime="20220311 16:18:09.912"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Back to results</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220311 16:18:09.913" endtime="20220311 16:18:09.951"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=add-to-cart-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220311 16:18:09.952" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" starttime="20220311 16:18:09.952" endtime="20220311 16:18:11.743"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Added to Cart</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220311 16:18:11.744" endtime="20220311 16:18:11.769"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="sc-buy-box-ptc-button"]/span/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220311 16:18:11.770" level="INFO">Clicking button '//*[@id="sc-buy-box-ptc-button"]/span/input'.</msg>
+<status status="PASS" starttime="20220311 16:18:11.770" endtime="20220311 16:18:13.203"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="authportal-main-section"]/div[2]/div/div[1]/form/div/div/div/h1</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220311 16:18:13.215" level="INFO">Current page contains element '//*[@id="authportal-main-section"]/div[2]/div/div[1]/form/div/div/div/h1'.</msg>
+<status status="PASS" starttime="20220311 16:18:13.203" endtime="20220311 16:18:13.216"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//*[@id="authportal-main-section"]/div[2]/div/div[1]/form/div/div/div/h1</arg>
+<arg>Sign-In</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220311 16:18:13.216" level="INFO">Verifying element '//*[@id="authportal-main-section"]/div[2]/div/div[1]/form/div/div/div/h1' contains exact text 'Sign-In'.</msg>
+<status status="PASS" starttime="20220311 16:18:13.216" endtime="20220311 16:18:13.233"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220311 16:18:18.241" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220311 16:18:13.234" endtime="20220311 16:18:18.241"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220311 16:18:18.242" endtime="20220311 16:18:20.463"/>
+</kw>
+<doc>Open and Select in Amazon</doc>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20220311 16:18:02.489" endtime="20220311 16:18:20.464"/>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" starttime="20220311 16:18:02.329" endtime="20220311 16:18:20.468"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo Amazon">Demo Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220316 12:32:40.204" rpa="false" schemaversion="2">
+<suite id="s1" name="Dialogs" source="C:\Users\carlos.picon\Development\robot-scripts\explore-libraries\Tests\Dialogs.robot">
+<test id="s1-t1" name="Logged out user can search for products">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220316 12:32:40.450" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220316 12:32:40.449" endtime="20220316 12:32:41.766"/>
+</kw>
+<status status="PASS" starttime="20220316 12:32:40.449" endtime="20220316 12:32:41.766"/>
+</kw>
+<kw name="Get Selection From User" library="Dialogs">
+<var>${new_browser}</var>
+<arg>Which browser?</arg>
+<arg>chrome</arg>
+<arg>ie</arg>
+<arg>firefox</arg>
+<doc>Pauses test execution and asks user to select a value.</doc>
+<msg timestamp="20220316 12:32:44.115" level="FAIL">No value provided by user.</msg>
+<status status="FAIL" starttime="20220316 12:32:41.794" endtime="20220316 12:32:44.115"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${BROWSER}</arg>
+<arg>${new_browser}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220316 12:32:44.116" endtime="20220316 12:32:44.116"/>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<status status="NOT RUN" starttime="20220316 12:32:44.117" endtime="20220316 12:32:44.117"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220316 12:32:44.119" endtime="20220316 12:32:46.281"/>
+</kw>
+<status status="PASS" starttime="20220316 12:32:44.118" endtime="20220316 12:32:46.281"/>
+</kw>
+<tag>Web</tag>
+<status status="FAIL" starttime="20220316 12:32:40.448" endtime="20220316 12:32:46.282">No value provided by user.</status>
+</test>
+<test id="s1-t2" name="Logged out user can add product to cart">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220316 12:32:46.295" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220316 12:32:46.294" endtime="20220316 12:32:47.599"/>
+</kw>
+<status status="PASS" starttime="20220316 12:32:46.293" endtime="20220316 12:32:47.599"/>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220316 12:32:47.601" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<status status="PASS" starttime="20220316 12:32:47.601" endtime="20220316 12:32:48.641"/>
+</kw>
+<status status="PASS" starttime="20220316 12:32:47.600" endtime="20220316 12:32:48.642"/>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Sell</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20220316 12:32:48.661" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.74)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01029943+2595139]
+	Ordinal0 [0x00FBC9F1+2148849]
+	Ordinal0 [0x00EB4528+1066280]
+	Ordinal0 [0x00E9C640+968256]
+	Ordinal0 [0x00EFE259+1368665]
+	Ordinal0 [0x00F0B292+1421970]
+	Ordinal0 [0x00EFB806+1357830]
+	Ordinal0 [0x00ED6086+1204358]
+	Ordinal0 [0x00ED6F96+1208214]
+	GetHandleVerifier [0x011CB232+1658114]
+	GetHandleVerifier [0x0128312C+2411516]
+	GetHandleVerifier [0x010BF261+560433]
+	GetHandleVerifier [0x010BE366+556598]
+	Ordinal0 [0x00FC286B+2173035]
+	Ordinal0 [0x00FC75F8+2192888]
+	Ordinal0 [0x00FC76E5+2193125]
+	Ordinal0 [0x00FD11FC+2232828]
+	BaseThreadInitThunk [0x75D2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77937A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77937A6E+238]
+</msg>
+<msg timestamp="20220316 12:32:48.669" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.74)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01029943+2595139]
+	Ordinal0 [0x00FBC9F1+2148849]
+	Ordinal0 [0x00EB4528+1066280]
+	Ordinal0 [0x00E9C640+968256]
+	Ordinal0 [0x00EFE259+1368665]
+	Ordinal0 [0x00F0B292+1421970]
+	Ordinal0 [0x00EFB806+1357830]
+	Ordinal0 [0x00ED6086+1204358]
+	Ordinal0 [0x00ED6F96+1208214]
+	GetHandleVerifier [0x011CB232+1658114]
+	GetHandleVerifier [0x0128312C+2411516]
+	GetHandleVerifier [0x010BF261+560433]
+	GetHandleVerifier [0x010BE366+556598]
+	Ordinal0 [0x00FC286B+2173035]
+	Ordinal0 [0x00FC75F8+2192888]
+	Ordinal0 [0x00FC76E5+2193125]
+	Ordinal0 [0x00FD11FC+2232828]
+	BaseThreadInitThunk [0x75D2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77937A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77937A6E+238]
+</msg>
+<status status="FAIL" starttime="20220316 12:32:48.642" endtime="20220316 12:32:48.669"/>
+</kw>
+<status status="FAIL" starttime="20220316 12:32:48.642" endtime="20220316 12:32:48.670"/>
+</kw>
+<kw name="Search for Products" library="TopNav">
+<status status="NOT RUN" starttime="20220316 12:32:48.670" endtime="20220316 12:32:48.670"/>
+</kw>
+<kw name="Verify Search Completed" library="SearchResults">
+<status status="NOT RUN" starttime="20220316 12:32:48.670" endtime="20220316 12:32:48.670"/>
+</kw>
+<status status="FAIL" starttime="20220316 12:32:47.599" endtime="20220316 12:32:48.671"/>
+</kw>
+<kw name="Execute Manual Step" library="Dialogs">
+<arg>Do something manually!</arg>
+<arg>It failed!</arg>
+<doc>Pauses test execution until user sets the keyword status.</doc>
+<status status="NOT RUN" starttime="20220316 12:32:48.672" endtime="20220316 12:32:48.673"/>
+</kw>
+<kw name="Select Product from Search Results" library="AmazonApp">
+<status status="NOT RUN" starttime="20220316 12:32:48.673" endtime="20220316 12:32:48.673"/>
+</kw>
+<kw name="Pause Execution" library="Dialogs">
+<doc>Pauses test execution until user clicks ``Ok`` button.</doc>
+<status status="NOT RUN" starttime="20220316 12:32:48.673" endtime="20220316 12:32:48.673"/>
+</kw>
+<kw name="Add Product to Cart" library="AmazonApp">
+<status status="NOT RUN" starttime="20220316 12:32:48.674" endtime="20220316 12:32:48.674"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220316 12:32:48.675" endtime="20220316 12:32:50.801"/>
+</kw>
+<status status="PASS" starttime="20220316 12:32:48.674" endtime="20220316 12:32:50.801"/>
+</kw>
+<tag>Web</tag>
+<status status="FAIL" starttime="20220316 12:32:46.286" endtime="20220316 12:32:50.802">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.74)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01029943+2595139]
+	Ordinal0 [0x00FBC9F1+2148849]
+	Ordinal0 [0x00EB4528+1066280]
+	Ordinal0 [0x00E9C640+968256]
+	Ordinal0 [0x00EFE259+1368665]
+	Ordinal0 [0x00F0B292+1421970]
+	Ordinal0 [0x00EFB806+1357830]
+	Ordinal0 [0x00ED6086+1204358]
+	Ordinal0 [0x00ED6F96+1208214]
+	GetHandleVerifier [0x011CB232+1658114]
+	GetHandleVerifier [0x0128312C+2411516]
+	GetHandleVerifier [0x010BF261+560433]
+	GetHandleVerifier [0x010BE366+556598]
+	Ordinal0 [0x00FC286B+2173035]
+	Ordinal0 [0x00FC75F8+2192888]
+	Ordinal0 [0x00FC76E5+2193125]
+	Ordinal0 [0x00FD11FC+2232828]
+	BaseThreadInitThunk [0x75D2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77937A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77937A6E+238]
+</status>
+</test>
+<doc>These are some web tests</doc>
+<status status="FAIL" starttime="20220316 12:32:40.209" endtime="20220316 12:32:50.810"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">Web</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Dialogs">Dialogs</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220316 12:32:48.661" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.74)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01029943+2595139]
+	Ordinal0 [0x00FBC9F1+2148849]
+	Ordinal0 [0x00EB4528+1066280]
+	Ordinal0 [0x00E9C640+968256]
+	Ordinal0 [0x00EFE259+1368665]
+	Ordinal0 [0x00F0B292+1421970]
+	Ordinal0 [0x00EFB806+1357830]
+	Ordinal0 [0x00ED6086+1204358]
+	Ordinal0 [0x00ED6F96+1208214]
+	GetHandleVerifier [0x011CB232+1658114]
+	GetHandleVerifier [0x0128312C+2411516]
+	GetHandleVerifier [0x010BF261+560433]
+	GetHandleVerifier [0x010BE366+556598]
+	Ordinal0 [0x00FC286B+2173035]
+	Ordinal0 [0x00FC75F8+2192888]
+	Ordinal0 [0x00FC76E5+2193125]
+	Ordinal0 [0x00FD11FC+2232828]
+	BaseThreadInitThunk [0x75D2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77937A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77937A6E+238]
+</msg>
+</errors>
+</robot>
